@@ -1,5 +1,8 @@
 body {
-  background-color: $secondaryColor;
+  background:url(/images/dock-with-mountain-background_865967-28763.avif) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-clip: content-box;
 }
 
 .header {
@@ -96,8 +99,8 @@ body {
 }
 
 .header__nav__right__btns__contact:hover {
-  border-color: $hoverColor;
-  background: $hoverColor;
+  border-color: $primaryColor;
+  background: $primaryColor;
   color: $secondaryColor;
 }
 

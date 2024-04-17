@@ -146,7 +146,10 @@ button {
 }
 
 body {
-  background-color: white;
+  background: url(/images/dock-with-mountain-background_865967-28763.avif) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-clip: content-box;
 }
 
 .header {
@@ -242,8 +245,8 @@ body {
 }
 
 .header__nav__right__btns__contact:hover {
-  border-color: #0B7572;
-  background: #0B7572;
+  border-color: black;
+  background: black;
   color: white;
 }
 
@@ -369,6 +372,13 @@ body {
   flex-direction: column;
   gap: 50px;
   align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 80px 0px;
 }
 
 .remove__table {
@@ -392,14 +402,22 @@ body {
   display: none;
   flex-direction: column;
   align-items: center;
+  padding: 80px 0px;
   gap: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 25px 45px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .show__form {
   display: flex;
 }
 
-input, select {
+input,
+select {
   outline: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -433,7 +451,11 @@ button:hover {
   color: black;
 }
 
-.user__profession, .user__fname, .user__lname, .user__birthdate, .user__address {
+.user__profession,
+.user__fname,
+.user__lname,
+.user__birthdate,
+.user__address {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -451,7 +473,8 @@ button:hover {
   gap: 50px;
 }
 
-.add__btn, .cancel__btn {
+.add__btn,
+.cancel__btn {
   width: 150px;
 }
 
