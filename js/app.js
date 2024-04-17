@@ -3,21 +3,21 @@ let USERS = JSON.parse(localStorage.getItem("users")) || [
     fname: "Boburmirzo",
     lname: "Abduvaliyev",
     birthdate: 1999,
-    profession: "teacher",
+    profession: "Teacher",
     address: "Tashkent",
   },
   {
     fname: "Iskandar",
     lname: "Abdumalikov",
     birthdate: 2007,
-    profession: "student",
+    profession: "Student",
     address: "Jizzax",
   },
   {
     fname: "Azizbek",
     lname: "Tolipov",
     birthdate: 2002,
-    profession: "admin",
+    profession: "Admin",
     address: "Tashkent",
   },
 ];
@@ -34,8 +34,6 @@ let selectProfession = document.querySelector("#user__profession__select");
 let addUserBtn = document.querySelector(".add__user");
 let cancelBtn = document.querySelector(".cancel__btn");
 let addBtn = document.querySelector(".add__btn");
-
-
 
 class Users {
   constructor(fname, lname, birthdate, profession, address) {
@@ -87,23 +85,43 @@ createTableData(USERS);
 
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  let student = new Student(fnameInput.value,lnameInput.value,birthdateInput.value,selectProfession.value,addressInput.value)
+  let fnameValue =
+    fnameInput.value.slice(0, 1).toUpperCase() +
+    fnameInput.value.slice(1).toLowerCase();
+  let lnameValue =
+    lnameInput.value.slice(0, 1).toUpperCase() +
+    lnameInput.value.slice(1).toLowerCase();
+  let birthdateValue = birthdateInput.value;
+  let selectProfessionValue =
+    selectProfession.value.slice(0, 1).toUpperCase() +
+    selectProfession.value.slice(1).toLowerCase();
+  let addressValue =
+    addressInput.value.slice(0, 1).toUpperCase() +
+    addressInput.value.slice(1).toLowerCase();
+
+  let student = new Student(
+    fnameValue,
+    lnameValue,
+    birthdateValue,
+    selectProfessionValue,
+    addressValue
+  );
   USERS.push(student);
   localStorage.setItem("users", JSON.stringify(USERS));
   createTableData(USERS);
-  fnameInput.value = ""
+  fnameInput.value = "";
   lnameInput.value = "";
   birthdateInput.value = "";
   selectProfession.value = "";
-  addressInput.value = ""
+  addressInput.value = "";
   form.classList.remove("show__form");
   tableWrapper.classList.remove("remove__table");
 });
 
-addUserBtn.addEventListener("click",()=>{
-   form.classList.add("show__form")
-   tableWrapper.classList.add("remove__table")
-})
+addUserBtn.addEventListener("click", () => {
+  form.classList.add("show__form");
+  tableWrapper.classList.add("remove__table");
+});
 
 cancelBtn.addEventListener("click", () => {
   form.classList.remove("show__form");
