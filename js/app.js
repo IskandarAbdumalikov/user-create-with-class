@@ -96,6 +96,8 @@ addBtn.addEventListener("click", (e) => {
   birthdateInput.value = "";
   selectProfession.value = "";
   addressInput.value = ""
+  form.classList.remove("show__form");
+  tableWrapper.classList.remove("remove__table");
 });
 
 addUserBtn.addEventListener("click",()=>{
