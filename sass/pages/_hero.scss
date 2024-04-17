@@ -1,0 +1,143 @@
+#hero {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  height: 100vh;
+  margin-bottom: 120px;
+}
+.table {
+  width: 1000px;
+  margin: auto;
+  border-collapse: collapse;
+  height: 100%;
+}
+
+.table tr {
+  border-bottom: 1px solid #aaa;
+}
+
+.table tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+.table th,
+.table td {
+  padding: 14px 20px;
+  text-align: left;
+}
+
+.table th {
+  background: #222;
+  color: #fff;
+}
+
+.table th:first-child {
+  border-radius: 14px 0 0 0;
+}
+
+.table th:last-child {
+  border-radius: 0 14px 0 0;
+}
+
+.table tr:nth-child(even) {
+  background: #aaa;
+}
+
+.table__wrapper {
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+
+.remove__table{
+  display: none;
+}
+
+.table select {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.table option {
+  background: #222;
+}
+
+//form
+
+.form {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.show__form{
+  display: flex;
+}
+
+
+
+input,select {
+  outline: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  transition: 0.4s;
+  width: 100%;
+}
+
+input:focus {
+  box-shadow: inset 0px 0px 10px gray;
+}
+
+button{
+  padding: 15px 20px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  border-radius: 5px;
+  background: $primaryColor;
+  color: $secondaryColor;
+  transition: 0.5s;
+}
+
+label{
+  font-size: 18px;
+  color: $secondaryColor;
+}
+
+button:hover{
+  background: $secondaryColor;
+  color: $primaryColor;
+}
+
+.user__profession,.user__fname,.user__lname,.user__birthdate,.user__address{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user__form{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 50px;
+}
+
+.form__btns{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.add__btn,.cancel__btn{
+  width: 150px;
+}
